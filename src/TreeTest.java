@@ -11,7 +11,7 @@ public class TreeTest {
             Tree tree = new Tree(scanner.nextLine(), scanner.nextDouble());
             scanner.nextLine();
 
-            if (isDuplicate(trees, tree)) {
+            if (isNotDuplicate(trees, tree)) {
                 trees[i] = tree;
             } else {
                 System.out.println("Duplikat");
@@ -22,7 +22,7 @@ public class TreeTest {
         scanner.close();
     }
 
-    private static boolean isDuplicate(Tree[] trees, Tree tree) {
+    private static boolean isNotDuplicate(Tree[] trees, Tree tree) {
 
         for (Tree value : trees) {
             if (tree.equals(value)) {
